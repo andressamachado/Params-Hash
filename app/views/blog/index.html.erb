@@ -1,0 +1,21 @@
+<h1>Index View</h1>
+
+<%= @test %>
+
+<!-- FORM to sending data using form-->
+
+<%= form_tag blog_path do %>
+  <div>
+    <!-- key :title for the params hash, the value will be what is passed in the form field -->
+    <%= text_field_tag :title %>
+  </div>
+  </br>
+  <div>
+    <!-- key :body for the params hash, the value will be what is passed in the form field -->
+    <%= text_area_tag :body %>
+  </div>
+
+  <%= submit_tag "Create Post" %>
+
+  <!-- for the keys, it is usually matching with what is in the database -->
+<% end %>
